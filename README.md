@@ -1,57 +1,59 @@
 # Anvaya Essence – Customer Segmentation & Purchase Behavior Analysis
 ## 🎯 Objective
-To develop an interactive Placement Analytics Dashboard to evaluate student placement performance and identify key salary drivers at **Academy for Business Careers, Data & Entrepreneurship (ABCDE)**.
 ### **Project Purpose:**
-   * Analyze placement outcomes across gender, specialization, degree type, and work experience
-   * Identify academic and demographic factors influencing placement success
-   * Examine salary distribution and CGPA-to-salary trends
-   * Provide actionable insights for institutional improvement
+Analyze customer demographics, spending behavior, and purchase channels to uncover actionable insights. Identify high-value customer segments based on income, generation, education, and family structure. Evaluate purchase patterns across store and web channels to understand customer buying preferences.
 ### **Key KPIs:**
-   * Total Students: 215
-   * Placed Students: 148
-   * Placement Rate: 68.84%
-   * Average Salary: ₹198.70K
-   * Maximum Salary: ₹940K
-   * Placement Rate by Degree Type & Specialization
+   * Total Customers
+   * Total Revenue (Total Spend)
+   * Purchase Volume
+   * Average Customer Income
+   * Average Customer Age
+   * Store Sales % vs Web Sales %
+   * Average Recency (Customer Activity Level)
 ### **Deliverables:**
-   * Interactive Power BI Dashboard
-   * Executive Presentation.
+   * Interactive Power BI Dashboard Pages
+   * Customer Segmentation Analysis
+   * Purchase Behavior & Channel Performance Insights
+   * Business-ready data visualization for decision-making
 ---
 
 ## 📘 Project Overview 
 ### **Context Highlights:**
-   * Analyzed 215 student placement records (AY 2025–26)
-   * Evaluated academic metrics – degree type, specialization, CGPA.
-   * Assessed demographics – gender, work experience
-   * Examined placement status and salary outcomes
-   * Demonstrates how data analytics empowers institutional decisions to optimize placement strategies and student       performance evaluation.
-   * Built an interactive Placement Analytics Dashboard using Power BI.	Key insights derived on:
-     * Key insights derived on:
-       * Overall placement rate and salary distribution
-       * CGPA-to-salary correlation patterns
-       * Gender and background-based placement trends
-       * Specialization-wise salary contributions
- ---
+In today’s competitive retail environment, understanding customer behavior is essential for improving customer retention and maximizing revenue.
+Businesses require deeper insights into who their customers are, how they purchase, and what factors influence their spending patterns. By analyzing customer demographic and purchase data, organizations can better identify high-value segments and optimize marketing strategies.
+This project examines customer demographics, spending behavior, and purchase channels to uncover patterns that influence buying decisions and engagement levels.
+The insights generated from this analysis help businesses to:
+   * Identify high-value customer segments
+   * Understand purchase channel preferences (Store vs Web)
+   * Evaluate customer engagement and recency behavior
+   * Support targeted marketing and revenue optimization strategies
+---
  
 ## 🗂️ Data Overview & Schema     
-### **Data Source:**  
-   * Source:  Institutional placement dataset (simulated academic dataset)
-   * Data Type:  Structured student-level records
-   * Time Period:  Academic Year 2025–26
+### **Data Source:** 
+   * Source: Customer Marketing Dataset
+   * Data Type: Structured transactional and demographic data
+   * Time Period: Multi-year customer purchase history
 ### **Data Structure & Metrics:** 
-   * Key Index Type: Student-level unique ID
-   * Total Rows: 215
+   * Key Index Types: Customer ID (Primary Identifier), Demographic Attributes, Purchase Behavior Metrics
+   * Total Rows: ~2,200 customer records
    * Categories:
-     * Demographics: Gender, Work Experience
-     * Academics: Degree Type, Specialization, CGPA
-     * Placement: Placement Status, Salary
+     * Demographics: Age Group, Generation, Education, Marital Status
+     * Financial: Income, Income Segment
+     * Household: Total Children
+     * Purchasing Behavior: Store Purchases, Web Purchases, Total Purchases
+     * Spending Metrics: Product Category Spending, Total Spend (Total Revenue)
    * Calculated Metrics:
-     * placement_flag (1 = Placed, 0 = Not Placed)
-     * Placement Rate %
-     * Average Salary
-     * Degree-wise Placement Distribution
- ---
- 
+     * Total Revenue (Total Spend)
+     * Purchase Volume
+     * Average Customer Spend
+     * Store Sales % & Web Sales %
+     * Generation Segmentation
+     * Income Segmentation
+     * Age Group Segmentation
+     * Customer Recency Status (Active / Slipping / At Risk)
+---
+
 ## 💻 Tech Stack    
 ### **Tools:**
    * **Excel**
@@ -63,7 +65,7 @@ To develop an interactive Placement Analytics Dashboard to evaluate student plac
    * **Power BI**  
       * Dashboard & Visualization
       * Data Modeling & Relationship Building
-      * DAX (DAX – KPI Calculations Columns & Measures)
+      * DAX – KPI Calculations Columns & Measures
       * Slicers & Dynamic Filtering
    * **PowerPoint**
       * Presentation and final dashboard snapshots
@@ -72,79 +74,71 @@ To develop an interactive Placement Analytics Dashboard to evaluate student plac
 ## 📈 Methodology & Analysis  
 ### **Preparation, Process & Analytical Approach:** 
    * **Data Preparation & Cleaning:**
-       * Removed missing and inconsistent values 
-       * Standardized categorical fields
-       * Validated salary and placement records
+       * Removed inconsistent or missing values
+       * Standardized categorical, numeric, and date fields
+       * Created derived attributes: Age, Age Groups, Generation
    * **Data Modeling & Integration:**
-       * Built an optimized data model
-       * Established relationships between academic and placement dimensions
+       * Structured dataset using Customer ID as primary index
+       * Created calculated columns and KPI measures using DAX
+       * Optimized model for efficient dashboard performance
    * **Feature Engineering:**
-       * Created placement_flag metric
-       * Derived Placement Rate %
+       * Developed segmentation variables:
+       * Generation Segmentation (Gen Z, Millennials, Gen X, Boomers)
+       * Income Segmentation (Low, Medium, High)
+       * Age Groups & Customer Recency Status
+       * Channel Sales % and Total Purchase Volume
    * **Visualization Design:**
-       * Designed KPI Cards for summary metrics
-       * Used Donut Chart for gender distribution
-       * Applied Bar & Clustered Charts for specialization and salary insights
-       * Implemented Interactive slicers for dynamic filtering
+       * Built two interactive Power BI dashboards
+       * Used KPI cards, bar charts, stacked bars, and combo charts
+       * Applied consistent visual theme and segmentation-based layout
    * **Validation & Formatting:**
-       * Verified KPI calculations against raw totals
-       * Applied consistent dashboard theme and formatting
-       * Optimized layout for executive readability
+       * Verified KPI calculations and aggregations
+       * Ensured consistent formatting and dashboard clarity
 ---
  
 ## ❓ Problem Statements
-Institutions collect placement data but often lack a centralized analytical dashboard to evaluate performance drivers in a structured manner.
-This results in limited visibility into:
-   * Overall placement efficiency and conversion rates
-   * Degree-wise placement contribution and disparities
-   * Specialization-level performance differences
-   * Gender-based salary variations
-   * Academic background impact on salary outcomes
+To better understand customer behavior and revenue drivers, the analysis focuses on identifying patterns across demographic segments, spending habits, and purchase channels.The following key questions guide the exploration of the dataset and help uncover actionable business insights.
 
 ### Key Questions:
-   *  What is the overall placement rate of the college?  
-   *  How many students are placed vs unplaced?
-   *  Which specialization (Marketing & Finance vs Marketing & HR) delivers stronger placement and salary outcomes?
-   *  How does degree type (Commerce & Management, Science & Technology, Others) influence placement success?
-   *  Is there a gender-based salary gap?
-   *  What are the average and maximum salary levels across segments?
-   *  How does academic background drive salary performance?
-   *  Which student segments contribute most to overall placement outcomes?
-   *  How can these insights help improve training focus and placement strategy?
+   * Which customer segments generate the highest revenue?
+   * How does spending vary across different age groups and generations?
+   * Which income segments contribute the most to overall revenue?
+   * How does education level influence purchasing behavior?
+   * What are the preferred purchase channels (Web vs Store) among customers?
+   * Which customers are active, slipping, or at risk of churn based on recency?
+   * How do purchase frequency and total revenue correlate across customer segments?
 ---
 
 ## 💡 Key Insights      
 ### **Top Findings:** 
-   * ~69% placement rate (148 of 215 students)
-   * Marketing & Finance specialization shows stronger placement and salary performance
-   * Science & Technology students achieve highest average salary (~₹0.22M)
-   * Commerce & Management has highest student participation (145 students)
-   * Male students show higher average salary compared to female students
-   * Clear positive relationship between academic background and salary
+   * Middle-aged customers (Age 49–58) and the Gen X generation contribute the highest share of total revenue and purchase volume, making them the most valuable customer segment.
+   * High-income customers generate significantly higher spending, indicating a strong link between income level and purchasing power.
+   * Customers with no children at home tend to spend more on average, suggesting higher disposable income.
+   * Graduates and postgraduate customers represent a large portion of the customer base and spending activity.
+   * Store purchases dominate overall transactions, showing a strong preference for offline shopping, while web purchases represent a smaller but steadily growing channel.
+   * Customer recency analysis shows most customers fall into Active or Slipping segments, highlighting opportunities for targeted retention strategies.
 
 ### **Supporting Metrics:**
-   * Total Students: 215
-   * Placed Students: 148
-   * Unplaced Students: 67
-   * Placement Rate: 68.84%
-   * Average Salary: ₹198.70K
-   * Maximum Salary: ₹940K
-   * Commerce & Management: 145 students
-   * Science & Technology: 59 students
-   * Others: 11 students
+   * Total Customers: ~2,200
+   * Highest Spending Age Group: 49–58
+   * Dominant Generation: Gen X / Older Millennials
+   * Store Sales Share: ~60% of total purchases
+   * Web Sales Share: ~40% of total purchases
+   * Primary Revenue Segment: Medium-to-High income customers
+   * Average Customer Spend: Indicates moderate to high purchasing capacity
 ---
  
 ## 📍 Conclusion
 ### **Summary:** 
-The placement analysis of Academy for Business Careers, Data & Entrepreneurship (ABCDE) reveals clear and measurable trends in student performance and employment outcomes.
-  
-   * Science & Technology students achieve the strongest salary outcomes, while Commerce & Management has the highest student participation. A clear performance gap is visible across degree types.
-  
-   * Specialization and gender influence placement and salary outcomes, with Marketing & Finance demonstrating stronger placement efficiency and higher salary performance compared to other specializations.
-  
-   * The interactive dashboard provides a comprehensive, data-driven view of placement performance, enabling administrators to refine training strategies, align curriculum with industry demands, and identify improvement areas across student segments.
-  
-   * Overall, this project demonstrates how structured analytics and visualization can strengthen institutional decision-making, improve placement strategies, and enhance student career outcomes.
+   * Customer purchasing behavior is strongly influenced by demographic factors such as age, income, education, and household structure.
+
+    * Middle-aged and higher-income customers contribute the most to overall revenue, making them key high-value segments.
+
+    * Store purchases dominate over web purchases, indicating strong offline engagement while highlighting potential growth opportunities for online channels.
+
+    * Customer recency analysis reveals opportunities to retain slipping customers and re-engage inactive segments.
+
+    * These insights enable businesses to design targeted marketing strategies, improve customer retention, and optimize revenue performance.
 ---
  
 ## 🖥️ Dashboard Overview
